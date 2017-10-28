@@ -1,6 +1,6 @@
 ﻿namespace GenericModalUITypeEditorSample
 {
-    partial class Form1
+    partial class MyDerivedForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // MyDerivedForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(278, 244);
+            this.Name = "MyDerivedForm";
+            this.SomeProperty = "Id";
+            this.Text = "MyDerivedForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-
