@@ -15,6 +15,10 @@ Here are elements of the example:
 - `MyEditorForm`: The generic editor form which will show a combo box containing propeties of the generic parameter.
 - `MyUITypeEditor`: Our custom tricky UI Type Editor.
 
-The example is ready to buidl. After you built the application, if you open `MyDerivedForm` and browse `SomeProperty` you will see the ditor form showing properties of generic type in combo box:
+The example is ready to buidl. After you built the application, if you open `MyDerivedForm` and browse `SomeProperty` you will see the ditor form showing properties of generic type in combo box.
 
 ![GenericModalUITypeEditorSample](https://github.com/r-aghaei/GenericModalUITypeEditorSample/blob/master/images/editor.png)
+
+The solution is valid for run-time as well.
+
+![GenericModalUITypeEditorSample-execution](https://github.com/r-aghaei/GenericModalUITypeEditorSample/blob/master/images/execution.png)
