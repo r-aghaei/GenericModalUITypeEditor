@@ -21,10 +21,8 @@ namespace GenericModalUITypeEditorSample
         {
             var svc = provider.GetService(typeof(IWindowsFormsEditorService))
                 as IWindowsFormsEditorService;
-            var componentProperty = context.GetType().GetProperty("Component");
-            var container = componentProperty.GetValue(context);
-            var myGenericTypeProperty = container.GetType().GetProperty("MyGenericType");
-            var genericArgument = (Type)myGenericTypeProperty.GetValue(container);
+            var myGenericTypeProperty = context.Instance.GetType().GetProperty("MyGenericType");
+            var genericArgument = (Type)myGenericTypeProperty.GetValue(context.Instance);
             var editorFormType = typeof(MyEditorForm<>);
             var genericArguments = new[] { genericArgument };
             var editorFormInstance = editorFormType.MakeGenericType(genericArguments);
