@@ -5,7 +5,7 @@ Suppose we have a `MyBaseForm<T>` having a `SomeProperty` property and also we c
 
 ## Solution
 
-To know how the solution works, you need to know when calling `EditValue` method of the `UITypeEditor`, the `context` parameter is of type `System.Windows.Forms.PropertyGridInternal.PropertyDescriptorGridEntry` which has a `Component` property which its value is the instance of the form which you are editing, so we know the type of the form and therefore we know the generic parameter type and therefore we can create our generic editor form.
+To know how the solution works, you need to know `EditValue` method has a `context` parameter which is of type [`ITypeDescriptorContext`](https://msdn.microsoft.com/en-us/library/system.componentmodel.itypedescriptorcontext(v=vs.110).aspx) and has an [`Instance`](https://msdn.microsoft.com/en-us/library/system.componentmodel.itypedescriptorcontext.instance(v=vs.110).aspx) property which is the owner object of the property that you are editing.Having the owner (the Form) we know the type of the form and therefore we know the generic parameter type and therefore we can create our generic editor form.
 
 Here are elements of the example:
 
